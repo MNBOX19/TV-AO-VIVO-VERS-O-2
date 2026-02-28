@@ -95,9 +95,7 @@
 
         #content-layer { display: flex; position: relative; }
         .col-cat { width: 25%; background: #0b0b0b; border-right: 1px solid #222; display: flex; flex-direction: column; height: 100%; }
-        .cat-head { padding: 12px; background: #111; color: #FFD700; font-weight: 900; border-bottom: 2px solid #FFD700; display: flex; align-items: center; justify-content: space-between; font-size: 14px; }
-        .btn-voltar { background: rgba(255, 255, 255, 0.1); width: 32px; height: 32px; border-radius: 50%; border: 1px solid #333; color: #FFD700; font-size: 14px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
-        .cat-title-spacer { width: 32px; } 
+        .cat-head { padding: 12px; background: #111; color: #FFD700; font-weight: 900; border-bottom: 2px solid #FFD700; display: flex; align-items: center; justify-content: center; font-size: 14px; }
         .cat-list { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
         
         .cat-item { padding: 14px 20px; border-bottom: 1px solid #1a1a1a; color: #999; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; touch-action: pan-y; }
@@ -192,9 +190,7 @@
     <div id="content-layer" class="layer hide">
         <div class="col-cat">
             <div class="cat-head">
-                <div id="btn-back" class="btn-voltar hide" onclick="App.back()"><i class="fas fa-arrow-left"></i></div>
-                <div style="flex:1; text-align:center;">CATEGORIAS</div>
-                <div class="cat-title-spacer"></div>
+                CATEGORIAS
             </div>
             <div id="cat-list" class="cat-list"></div>
         </div>
@@ -521,8 +517,7 @@
                 
                 if(n===0) document.getElementById('login-layer').classList.remove('hide');
                 if(n===1) document.getElementById('dash-layer').classList.remove('hide');
-                if(n===2) { document.getElementById('content-layer').classList.remove('hide'); document.getElementById('btn-back').classList.remove('hide'); this.page = 0; } 
-                else { var btn = document.getElementById('btn-back'); if(btn) btn.classList.add('hide'); }
+                if(n===2) { document.getElementById('content-layer').classList.remove('hide'); this.page = 0; } 
                 if(n===3) document.getElementById('settings-layer').classList.remove('hide');
                 this.scr=n; this.zone=0; this.idx=0; this.updateFocus();
             },
